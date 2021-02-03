@@ -9,17 +9,49 @@
         // function for making a computer play Rock-Paper-Scissors
         function computerPlay() {
             const rand = Math.floor(Math.random() * 3);
-            if (rand === 1) {
+            if (rand === 0) {
                 return 'rock'
             }
-            else if (rand === 2) {
+            else if (rand === 1) {
                 return 'paper'
             } else {
                 return 'scissor'
             }
-
         }
 
+        function playRound(playerSelection, computerSelection) {
+            if (playerSelection === 'paper' && computerSelection === 'scissor') {
+                return "You Lose! Scissor beats Paper"
+            }
+            else if (playerSelection === 'paper' && computerSelection === 'rock') {
+                return "You Win! Paper beats Rock"
+            }
+            else if (playerSelection === 'scissor' && computerSelection === 'rock') {
+                return "You Lose! Rock beats Scissor"
+            }
+            else if (playerSelection === 'scissor' && computerSelection === 'paper') {
+                return "You Win! Scissor beats Paper"
+            }
+            else if (playerSelection === 'rock' && computerSelection === 'paper') {
+                return "You Lose! Paper beats Rock"
+            }
+            else if (playerSelection === 'rock' && computerSelection === 'scissor') {
+                return "You Win! Rock beats Scissor"
+            }
+            else {
+                return "Tie!"
+            }
+        }
+
+        function game() {
+            for (let i = 0; i < 5; i++) {
+                playRound();
+            }
+        }
+
+        const playerSelection = prompt().toLowerCase;
+        const computerSelection = computerPlay();
+        console.log(playRound(playerSelection, computerSelection))
 
 
 
