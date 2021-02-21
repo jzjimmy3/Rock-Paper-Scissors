@@ -6,36 +6,43 @@ const results = document.querySelector('#results')
 let userScore = 0;
 let compScore = 0;
 let winningScore = 5;
+const gameStart = true;
 
 
 const btnRock = document.querySelector('#btn-rock')
 btnRock.addEventListener('click', () => {
-    results.textContent = playOneRound("rock", computerPlay())
-    userDisplay.textContent = userScore;
-    compDisplay.textContent = compScore;
+    if (gameStart) {
+        results.textContent = playOneRound("rock", computerPlay())
+        userDisplay.textContent = userScore;
+        compDisplay.textContent = compScore;
+    }
     if (userScore === winningScore || compScore === winningScore) {
-        document.getElementById('btn-rock').disabled = true;
+        gameOver();
         results.textContent = "The End"
     }
 })
 
 const btnPaper = document.querySelector('#btn-paper')
 btnPaper.addEventListener('click', () => {
-    results.textContent = playOneRound("rock", computerPlay())
-    userDisplay.textContent = userScore;
-    compDisplay.textContent = compScore;
+    if (gameStart) {
+        results.textContent = playOneRound("rock", computerPlay())
+        userDisplay.textContent = userScore;
+        compDisplay.textContent = compScore;
+    }
     if (userScore === winningScore || compScore === winningScore) {
-        document.getElementById('btn-paper').disabled = true;
+        gameOver()
         results.textContent = "The End"
     }
 })
 const btnScissor = document.querySelector('#btn-scissor')
 btnScissor.addEventListener('click', () => {
-    results.textContent = playOneRound("rock", computerPlay())
-    userDisplay.textContent = userScore;
-    compDisplay.textContent = compScore;
+    if (gameStart) {
+        results.textContent = playOneRound("rock", computerPlay())
+        userDisplay.textContent = userScore;
+        compDisplay.textContent = compScore;
+    }
     if (userScore === winningScore || compScore === winningScore) {
-        document.getElementById('btn-scissor').disabled = true;
+        gameOver()
         results.textContent = "The End"
     }
 })
@@ -60,6 +67,13 @@ function computerPlay() {
     } else {
         return 'scissor'
     }
+}
+
+function gameOver() {
+    document.getElementById('btn-rock').disabled = true;
+    document.getElementById('btn-paper').disabled = true;
+    document.getElementById('btn-scissor').disabled = true;
+    gameStart = false;
 }
 
 function playOneRound(playerSelection, computerSelection) {
