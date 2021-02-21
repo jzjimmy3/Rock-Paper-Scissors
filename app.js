@@ -14,12 +14,10 @@ btnRock.addEventListener('click', () => {
     userDisplay.textContent = userScore;
     compDisplay.textContent = compScore;
     if (userScore === winningScore || compScore === winningScore) {
+        document.getElementById('btn-rock').disabled = true;
         results.textContent = "The End"
     }
 })
-
-
-
 
 const btnPaper = document.querySelector('#btn-paper')
 btnPaper.addEventListener('click', () => {
@@ -27,6 +25,7 @@ btnPaper.addEventListener('click', () => {
     userDisplay.textContent = userScore;
     compDisplay.textContent = compScore;
     if (userScore === winningScore || compScore === winningScore) {
+        document.getElementById('btn-paper').disabled = true;
         results.textContent = "The End"
     }
 })
@@ -36,6 +35,7 @@ btnScissor.addEventListener('click', () => {
     userDisplay.textContent = userScore;
     compDisplay.textContent = compScore;
     if (userScore === winningScore || compScore === winningScore) {
+        document.getElementById('btn-scissor').disabled = true;
         results.textContent = "The End"
     }
 })
@@ -46,6 +46,9 @@ reset.addEventListener('click', () => {
     compScore = 0;
     userDisplay.textContent = 0;
     compDisplay.textContent = 0;
+    document.getElementById('btn-rock').disabled = false;
+    document.getElementById('btn-paper').disabled = false;
+    document.getElementById('btn-scissor').disabled = false;
 })
 function computerPlay() {
     const rand = Math.floor(Math.random() * 3);
