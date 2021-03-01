@@ -83,39 +83,39 @@ function gameOver() {
     gameStart = false;
 }
 
-function playOneRound(playerSelection, computerSelection) {
-    if (playerSelection === 'shield' && computerSelection === 'spear') {
+function playOneRound(player, comp) {
+    if (player === 'shield' && comp === 'spear') {
         compScore += 1;
         compStorage = "Spear";
         return "You Lose! Spear beats Shield"
     }
-    else if (playerSelection === 'shield' && computerSelection === 'sword') {
+    else if (player === 'shield' && comp === 'sword') {
         userScore += 1;
         compStorage = "Sword";
         return "You Win! Shield beats Sword"
     }
-    else if (playerSelection === 'spear' && computerSelection === 'sword') {
+    else if (player === 'spear' && comp === 'sword') {
         compScore += 1;
         compStorage = "Sword";
         return "You Lose! Sword beats Spear"
     }
-    else if (playerSelection === 'spear' && computerSelection === 'shield') {
+    else if (player === 'spear' && comp === 'shield') {
         userScore += 1;
         compStorage = "Shield";
         return "You Win! Spear beats Shield"
     }
-    else if (playerSelection === 'sword' && computerSelection === 'shield') {
+    else if (player === 'sword' && comp === 'shield') {
         compScore += 1;
         compStorage = "Shield"
         return "You Lose! Shield beats Sword"
     }
-    else if (playerSelection === 'sword' && computerSelection === 'spear') {
+    else if (player === 'sword' && comp === 'spear') {
         userScore += 1;
         compStorage = "Spear"
         return "You Win! Sword beats Spear"
     }
     else {
-        compStorage = playerSelection
+        compStorage = player
         return "Tie!"
     }
 }

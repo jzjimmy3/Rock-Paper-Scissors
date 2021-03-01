@@ -14,10 +14,10 @@ button{
     border-color: black;
     background-color: #c0c0c0;
 }
-button :hover{
-    height: 250px;
-    width: 250px;
-}
+/* button :hover{
+    height: 205px;
+    width: 205px;
+} */
 
 h1{
     font-size: 75px;
