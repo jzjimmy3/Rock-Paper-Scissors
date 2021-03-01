@@ -13,42 +13,47 @@
 </head>
 
 <body>
-    <div class="container d-flex justify-content-center">
+    <!-- ===== Header =====-->
+    <header id="layout">
         <h1>Sword-Shield-Spear</h1>
-    </div>
-    <div class="container">
-        <div class="d-flex justify-content-center">
+    </header>
+    <!-- ===== Main Content ===== -->
+    <main class="container">
+        <div id="layout">
             <p>3 Weapons | 5 Lives | 1 Victor</p>
         </div>
-        <div class="d-flex justify-content-center">
+        <div id="layout">
             <p>Swords beats Spears | Spears beats Shields | Shields beats Swords</p>
         </div>
-        <div class="d-flex justify-content-center">
+        <div id="layout">
             <p>Choose Your Weapon!</p>
         </div>
-    </div>
-    <div class="container d-flex justify-content-center">
-        <div>
-            <p>You: <span id="userDisplay">0</span> Opponent: <span id="compDisplay">0</span> </p>
+        <div id="layout">
+            <div>
+                <p>You: <span id="userDisplay">0</span> Opponent: <span id="compDisplay">0</span> </p>
+            </div>
         </div>
-    </div>
-    <div class="container d-flex justify-content-center">
-        <div>
-            <p><span id="commentate"> </span></p>
+        <div id="layout">
+            <div>
+                <p><span id="commentate"> </span></p>
+            </div>
         </div>
-    </div>
-    <div class="container d-flex justify-content-center">
-        <p><span id="results"> </span></p>
-    </div>
-    <div class="container d-flex justify-content-center">
-        <button id="btn-sword"><img src="images/Sword.png" alt=""></button>
-        <button id="btn-shield"><img src="images/Shield.png" alt=""></button>
-        <button id="btn-spear"><img src="images/Spear.png" alt=""></button>
-    </div>
-    <div class="container d-flex justify-content-center">
-        <button id="reset">Reset</button>
-    </div>
+        <div id="layout">
+            <p><span id="results"> </span></p>
+        </div>
+    </main>
 
+    <!-- ===== Button Images ===== -->
+    <section class="contianer">
+        <div id="layout">
+            <button id="btn-sword"><img src="images/Sword.png" alt=""></button>
+            <button id="btn-shield"><img src="images/Shield.png" alt=""></button>
+            <button id="btn-spear"><img src="images/Spear.png" alt=""></button>
+        </div>
+        <div id="layout">
+            <button id="reset">Reset</button>
+        </div>
+    </section>
 
 
     <script src='app.js'></script>

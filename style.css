@@ -18,6 +18,12 @@ h1{
     font-size: 75px;
 }
 
+#layout{
+    display: flex;
+    justify-content: center;
+}
+
 #reset{
     margin-top: 10px;
 }
+
